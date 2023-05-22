@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.font-outline-2 {
+  -webkit-text-stroke: 1px rgba(27, 28, 87, 1);
+}
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+.bgi {
+  background-image: -webkit-linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+.bbggii {
+  background-image: url("../public/images/Rectangle 24.png");
+  background-size: cover;
+  height: 250px;
+}
+.navbg {
+  background: rgba(130, 255, 210, 1);
+  background: linear-gradient(
+    120deg,
+    rgba(130, 255, 210, 1) 0%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 1%
+  );
+}
+.esraa::-webkit-scrollbar {
+  display: none;
+}
