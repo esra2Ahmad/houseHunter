@@ -84,6 +84,7 @@ const Hero = () => {
                     src="../images/Ellipse 4.png"
                     width={150}
                     height={50}
+                    alt="user"
                   
                     
                   />
@@ -92,6 +93,7 @@ const Hero = () => {
                     src="../images/Ellipse 5.png"
                     width={150}
                     height={50}
+                    alt="user"
                     
                   />
                   <img
@@ -99,6 +101,7 @@ const Hero = () => {
                     src="../images/Ellipse 6.png"
                     width={150}
                     height={50}
+                    alt="user"
                   />
                 </div>
                 <div className="flex flex-col justify-start w-full py-[25px] px-[10px]  relative left-[-20px]">
@@ -116,6 +119,7 @@ const Hero = () => {
                   src="../images/Rectangle 12.png "
                   width={50}
                   height={50}
+                  alt="Rectangular 12"
                 />
                 <div className="flex flex-col relative left-[-65px] top-[25px]">
                   <h1 className="font-lexend text-[16px] leading-[24px] font-semibold text-darkblue">
@@ -132,6 +136,7 @@ const Hero = () => {
                   src="../images/Ellipse 6(4).png"
                   width={100}
                   height={100}
+                  alt="user"
                   
                 />
                 <div className="flex flex-col py-[30px]">
