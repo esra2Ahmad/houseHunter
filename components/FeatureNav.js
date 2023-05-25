@@ -5,8 +5,8 @@
                 import { FeatureNavs } from '@/constants';
                 import { BsFillHouseDoorFill } from 'react-icons/bs';
                 import { MdVilla, MdApartment } from 'react-icons/md';
-                 import HouseCard from './HouseCard';
-                 import { houseInfo } from '@/constants';
+                import HouseCard from './HouseCard';
+                import { houseInfo } from '@/constants';
 
                 const FeatureNav = () => {
                 const [scrolling,setScrolling]=useState(0);

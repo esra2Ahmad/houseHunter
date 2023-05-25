@@ -45,6 +45,9 @@
     rgba(255, 255, 255, 1) 1%
   );
 }
-.esraa::-webkit-scrollbar {
+.none::-webkit-scrollbar {
   display: none;
+}
+.borderinput{
+  border: 1px solid #E0E3EB;
 }
