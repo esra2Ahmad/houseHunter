@@ -161,4 +161,18 @@ export const houseInfo = [
     type: 'Villa'
   },
 ]
+export const propertyNavs = [
+  {
+    type:'House',
+    active: false,
+  },
+  {
+    type:'Villa',
+    active: false,
+  },
+  {
+    type:'Apartment',
+    active: false,
+  }
+]
 

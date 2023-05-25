@@ -3,19 +3,41 @@
   import Image from "next/image";
   import Link from "next/link";
   import { BsFillHouseDoorFill } from 'react-icons/bs';
-  import { MdVilla, MdApartment } from 'react-icons/md';
+  import { MdVilla } from 'react-icons/md';
+  import { MdApartment } from 'react-icons/md';
   import {FeatureNavs} from "../constants/index.js";
+  import HouseCard from "./HouseCard.js";
+  import styles from "../styles/HouseCard.module.css";
+  import { houseInfo } from "../constants/index.js";
+  import { propertyNavs } from "../constants/index.js";
 
   const Feature = () => {
     const [scrolling, setScrolling] = useState(0);
     const [featurNav,setFeatureNav]=useState(FeatureNavs);
-                
+    const [sectionNavs, setSectionNavs] = useState(propertyNavs);          
     const carouselRef = useRef();
-    const navs = FeatureNavs.map(item =>(
-      <Link key={item.type} href={item.link}>
+    let houseInfoFiltered = filterProperties(houseInfo, sectionNavs)
+
+    function filterProperties(properties, sectionNavs){
+        let sectionNavsFiltered = sectionNavs.filter(nav => nav.active);
+        console.log("sectionNavsFiltered: ",sectionNavsFiltered)
+
+        let sectionNavsFilters = sectionNavsFiltered.map(nav => nav.type);
+        console.log("sectionNavsFilters: ", sectionNavsFilters)
+
+        let filteredProperties = properties.filter(property => sectionNavsFilters.includes(property.type))
+        console.log("filteredProperties: ", filteredProperties)
+
+        filteredProperties = filteredProperties.length ? filteredProperties : properties;
+        console.log("filteredProperties: ", filteredProperties)
+        
+        return filteredProperties;
+    }
+    const navs = featurNav.map(item =>(
+      <button key={item.type} href={item.link}>
         
           
-          <li className={item.active?"bg-greenl text-greenm  w-[120px] h-[40px] rounded-[32px] flex ":"bg-white border-[1px] border-offwhite w-[120px] h-[40px] rounded-[32px] text-gray flex"}
+          <li className={item.active?"bg-greenl text-greenm w-[120px] h-[40px] rounded-[32px] flex  ":"bg-white border-[1px] border-offwhite w-[120px] h-[40px] rounded-[32px]  text-gray flex"}
           
           onClick={()=> makeActive(item.type)}>
               {item.type==="House"&&<BsFillHouseDoorFill className="text-[25px] ml-[15px] mt-[5px]"/>}
@@ -24,13 +46,13 @@
               <div className=" pl-[10px] pt-[5px]">{item.type}</div>
               
           </li>
-      </Link>
+      </button>
 
   ))
   const makeActive = (type) => {
     setFeatureNav(prev => {
     return prev.map(item => {
-        return item.type === type ? {...item, active:true} : {...item, active:false}
+        return item.type === type ? {...item, active:!item.active}: {...item}
         
     })
 })
@@ -47,7 +69,7 @@
         const scrollLeft = Math.floor(
           carouselRef.current.scrollWidth *
             0.7 *
-            ((scrolling + 1) / 4)
+            ((scrolling + 1) / houseInfo.length)
         );
         scroll(carouselRef.current, scrollLeft);
       }
@@ -59,7 +81,7 @@
         const scrollLeft = Math.floor(
           carouselRef.current.scrollWidth *
             0.7 *
-            ((scrolling - 1) / 4)
+            ((scrolling - 1) /houseInfo.length)
         );
         scroll(carouselRef.current, scrollLeft);
       }
@@ -69,8 +91,8 @@
       if (carouselRef.current) {
         const index = Math.round(
           (carouselRef.current.scrollLeft /
-            (carouselRef.current.scrollWidth * 0.7)) *
-            4
+            (carouselRef.current.scrollWidth * 0.7)) *houseInfo.length
+            
         );
         setScrolling(index);
       }
@@ -113,109 +135,17 @@
             </button>
           </div>
         </div>
-        <div className="overflow-x-auto pl-[120px] esraa" ref={carouselRef} onScroll={handleScroll}>
-          <div className="flex justify-start gap-[55px] pt-[30px] w-[2000px]">
-            <div className="flex flex-col items-start justify-between">
-              <Image
-                src="/../public/images/Img(1).png"
-                width="360"
-                height="382"
-              />
-              <p className="pt-[25px] font-lexend text-[24px]  leading-[32px] font-medium text-bluem">
-                Roseland House{" "}
-              </p>
-              <span className="pt-[15px] font-lexend text-[20px]  leading-[32px] font-medium text-span">
-                $ 35.000.000
-              </span>
-              <div className="flex flex-row items-start gap-[20px] pt-[25px]">
-                <Image
-                  src="/../public/images/Ellipse 6(1).png"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h1 className="font-lexend text-[18px]  leading-[24px] font-medium text-bluem">
-                    Dianne Russell
-                  </h1>
-                  <h2 className="font-lexend text-[14px]  leading-[22px] font-medium text-graym">
-                    Manchester,Kentucky
-                  </h2>
+        <div className="overflow-auto pl-[120px] esraa w-[2000px]" ref={carouselRef} onScroll={handleScroll}>
+        <div className="flex  justify-start items-center pt-[30px] overflow-hidden ">
+                    {houseInfoFiltered.map((house, index) => {
+                        return (
+                            <HouseCard
+                                key={index}
+                                house={house}
+                            />
+                        )
+                    })}
                 </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-between">
-              <Image src="/../public/images/img2.png" width="370" height="382" />
-              <p className="pt-[25px] font-lexend  text-[24px] leading-[32px] font-medium text-bluem">
-                Wood Landside{" "}
-              </p>
-              <span className="pt-[15px] font-lexend text-[20px]  leading-[32px] font-medium text-span">
-                $ 20.000.000
-              </span>
-              <div className="flex flex-row items-start gap-[20px] pt-[25px]">
-                <Image
-                  src="/../public/images/Ellipse 6(2).png"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h1 className="font-lexend text-[18px]  leading-[24px] font-medium text-bluem">
-                    Robert Fox
-                  </h1>
-                  <h2 className="font-lexend text-[14px]  leading-[22px] font-medium text-graym">
-                    Dr.San Jose,South Dakota
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-between">
-              <Image src="/../public/images/1mg3.png" width="370" height="382" />
-              <p className=" pt-[25px] font-lexend text-[24px]  leading-[32px] font-medium text-bluem">
-                Old Lighthouse
-              </p>
-              <span className=" pt-[15px] font-lexend text-[20px]  leading-[32px] font-medium text-span">
-                $ 44.000.000
-              </span>
-              <div className="flex flex-row items-start gap-[20px] pt-[25px]">
-                <Image
-                  src="/../public/images/Ellipse 6(3).png"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h1 className="font-lexend text-[18px]  leading-[24px] font-medium text-bluem">
-                    Ronald Richards
-                  </h1>
-                  <h2 className="font-lexend text-[14px]  leading-[22px] font-medium text-graym">
-                    Santa Ana,Illinois
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-start justify-between">
-              <Image src="/../public/images/true.png" width="370" height="382" />
-              <p className=" pt-[25px] font-lexend text-[24px]  leading-[32px] font-medium text-bluem">
-                Cosmos House{" "}
-              </p>
-              <span className=" pt-[15px] font-lexend text-[20px]  leading-[32px] font-medium text-span">
-                $ 22.000.000
-              </span>
-              <div className="flex flex-row items-start gap-[20px] pt-[25px]">
-                <Image
-                  src="/../public/images/Ellipse 6(5).png"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h1 className="font-lexend text-[18px]  leading-[24px] font-medium text-bluem">
-                    Jenny Wel
-                  </h1>
-                  <h2 className="font-lexend text-[14px]  leading-[22px] font-medium text-graym">
-                    Preston.Rd
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
