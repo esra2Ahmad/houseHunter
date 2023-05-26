@@ -25,7 +25,7 @@ const Hero = () => {
                 height="25"
               />
               <input
-                className=" text-[16px] font-lexend text-gray  w-full px-[40px] h-[50px]"
+                className=" text-[16px] font-lexend text-gray  w-full px-[40px] h-[50px] border-none"
                 type="text"
                 placeholder=" search for the location you want!"
               ></input>

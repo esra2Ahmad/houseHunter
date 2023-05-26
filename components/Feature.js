@@ -158,11 +158,11 @@ const Feature = () => {
         </div>
       </div>
       <div
-        className="overflow-x-auto pl-[120px] esraa w-[2000px]"
+        className="overflow-x-auto pl-[120px]  none"
         ref={carouselRef}
         onScroll={handleScroll}
       >
-        <div className="flex  justify-start items-center pt-[30px]">
+        <div className="flex  justify-start w-fit items-center pt-[30px] none">
           {houseInfoFiltered.map((house, index) => {
             return <HouseCard key={index} house={house} />;
           })}

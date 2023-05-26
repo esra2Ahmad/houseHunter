@@ -51,3 +51,41 @@
 .borderinput{
   border: 1px solid #E0E3EB;
 }
+.contactpic{
+  border-radius: 50%;
+}
+.vediob{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2.5px);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: white;
+    font-size: 2rem;
+
+    display: grid;
+    place-items: center;
+}
+.video iframe{
+  transition: 0.3s;
+}
+ .video:hover{
+  z-index: 2;
+  width: 813px;
+  height:457px;
+}
+ .video:hover iframe{
+  width: 813px;
+  height:457px;
+}
+.videoButton:hover{
+  background: rgba(255, 255, 255, 0.6);
+}

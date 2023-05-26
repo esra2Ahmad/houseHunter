@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Feature from"../components/Feature";
-import Section3 from "@/components/Section3";
+import HouseDetails from "@/components/HouseDetails";
 import Reviewss from "@/components/Reviewss";
 import Section5 from "@/components/Section5";
 import Subscribe from "@/components/Subscribe";
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div>
         <Feature/>
-        <Section3/>
+        <HouseDetails/>
         <Reviewss/>
         <Section5/>
         <Subscribe/>
