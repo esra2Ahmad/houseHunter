@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Feature from"../components/Feature";
 import HouseDetails from "@/components/HouseDetails";
 import Reviewss from "@/components/Reviewss";
-import Section5 from "@/components/Section5";
+import Tips from "@/components/Tips";
 import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 
@@ -26,7 +26,7 @@ export default function Home() {
         <Feature/>
         <HouseDetails/>
         <Reviewss/>
-        <Section5/>
+        <Tips/>
         <Subscribe/>
         </div>
         <Footer/>

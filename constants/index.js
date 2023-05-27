@@ -53,7 +53,7 @@ export const reviews = [
   },
 ];
 
-export const section5 = [
+export const tips = [
   {
     image: "/../public/images/Rectangle 22.png",
     title: "The things we need to check when we want to buy a house",

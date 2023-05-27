@@ -13,7 +13,7 @@ export default function Reviewss() {
   const handleClick = (e, i) => {
       e.preventDefault();
       if (carouselRef.current) {
-          const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / reviews.length));
+          const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7* (i / reviews.length));
           scroll(carouselRef.current, scrollLeft);
       }
   }
@@ -25,8 +25,6 @@ export default function Reviewss() {
       }
   }
   
-  // snap back to beginning of scroll when window is resized
-  // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
       const handleResize = () => {
           if (carouselRef.current) {
@@ -41,7 +39,7 @@ export default function Reviewss() {
 
     <div className="">
       
-      <div  className="flex items-center  mt-[200px]">
+      <div  className=" items-center mb-[50px] mt-[200px]">
       <p className="mt-[-100px] text-center font-lexend text-[14px]  leading-[17.5px] font-medium text-orange">
         See Our Review
       </p>
@@ -50,7 +48,7 @@ export default function Reviewss() {
       </h2>
       </div>
 
-      <div className=" flex gap-[56px] pt-[20px] h-[550px]  overflow-x-auto  review " ref={carouselRef} onScroll={handleScroll} >
+      <div className=" flex  gap-[56px] pt-[20px] h-[550px]  max-w-max overflow-x-auto  review " ref={carouselRef} onScroll={handleScroll} >
 
         {reviews.map((review, index) => (
           <Card

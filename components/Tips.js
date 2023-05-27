@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { section5 } from "../constants/index.js";
-import Col1 from "./Col1.js";
+import { tips } from "../constants/index.js";
+import Partners from "./Partners.js";
 
-const Section5 = () => {
+const Tips = () => {
   return (
     <div>
       <h3 className=" text-center font-lexend text-[14px]  leading-[17.5px] font-medium text-orange">
@@ -16,8 +16,8 @@ const Section5 = () => {
       </button>
       <div className=" flex flex-row  px-[120px] gap-[80px] pt-[100px]">
         <div>
-          {section5.map((value, index) => (
-            <Col1
+          {tips.map((value, index) => (
+            <Partners
               key={index}
               title={value.title}
               image={value.image}
@@ -66,4 +66,4 @@ const Section5 = () => {
     </div>
   );
 };
-export default Section5;
+export default Tips;
