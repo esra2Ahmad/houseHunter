@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Card(props){
     return (
-        <div className="w-[740px] flex flex-col  items-center ">
+        <div className="w-[740px] flex flex-col  items-center h-[505px]">
             <Image src={props.image} width='740' height='400'/>
             <div className=" flex flex-col items-start py-[32px] bg-white box rounded-[16px] relative top-[-130px] w-[612px]">
                 <h4 className=" px-[20px] font-lexend text-[20px] leading-[25px] text-darkblue">{props.title}</h4>

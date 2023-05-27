@@ -1,91 +1,102 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-.font-outline-2 {
-  -webkit-text-stroke: 1px rgba(27, 28, 87, 1);
-}
-.bg-blue-gradient {
-  background: linear-gradient(
-    157.81deg,
-    #def9fa -43.27%,
-    #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
-  );
-}
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-.bgi {
-  background-image: -webkit-linear-gradient(
-    157.81deg,
-    #def9fa -43.27%,
-    #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
-  );
-}
-.bbggii {
-  background-image: url("../public/images/Rectangle 24.png");
-  background-size: cover;
-  height: 250px;
-}
-.navbg {
-  background: rgba(130, 255, 210, 1);
-  background: linear-gradient(
-    120deg,
-    rgba(130, 255, 210, 1) 0%,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(255, 255, 255, 1) 1%
-  );
-}
-.none::-webkit-scrollbar {
-  display: none;
-}
-.borderinput{
-  border: 1px solid #E0E3EB;
-}
-.contactpic{
-  border-radius: 50%;
-}
-.vediob{
-  position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 48px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2.5px);
-    border: none;
+  @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  .font-outline-2 {
+    -webkit-text-stroke: 1px rgba(27, 28, 87, 1);
+  }
+  .bg-blue-gradient {
+    background: linear-gradient(
+      157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%
+    );
+  }
+  .blue__gradient {
+    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+    filter: blur(123px);
+  }
+  .bgi {
+    background-image: -webkit-linear-gradient(
+      157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%
+    );
+  }
+  .bbggii {
+    background-image: url("../public/images/Rectangle 24.png");
+    background-size: cover;
+    height: 250px;
+  }
+  .navbg {
+    background: rgba(130, 255, 210, 1);
+    background: linear-gradient(
+      120deg,
+      rgba(130, 255, 210, 1) 0%,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(255, 255, 255, 1) 1%
+    );
+  }
+  .none::-webkit-scrollbar {
+    display: none;
+  }
+  .borderinput{
+    border: 1px solid #E0E3EB;
+  }
+  .contactpic{
     border-radius: 50%;
-    cursor: pointer;
+  }
+  .vediob{
+    position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
 
-    color: white;
-    font-size: 2rem;
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(2.5px);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
 
-    display: grid;
-    place-items: center;
+      color: white;
+      font-size: 2rem;
+      display: grid;
+      place-items: center;
+  }
+  .video iframe{
+    transition: 0.3s;
+  }
+  .video:hover{
+    z-index: 2;
+    width: 813px;
+    height:457px;
+  }
+  .video:hover iframe{
+    width: 813px;
+    height:457px;
+  }
+  .button{
+    all: unset;
+width: 12px;
+height: 12px;
+background:#214d76 ;
+border-radius: 50%;
+ transition: background 0.3s;
+position: relative;
+top:-80px;
 }
-.video iframe{
-  transition: 0.3s;
-}
- .video:hover{
-  z-index: 2;
-  width: 813px;
-  height:457px;
-}
- .video:hover iframe{
-  width: 813px;
-  height:457px;
-}
-.videoButton:hover{
-  background: rgba(255, 255, 255, 0.6);
-}
+.review{
+-ms-overflow-style: none;
+overscroll-behavior-inline: contain;
+scrollbar-width: none; /* Firefox */
+                        }

@@ -13,7 +13,7 @@ const HouseDetails = () => {
 
   return (
     <div>
-      <section className="pt-[100px] px-[120px] w-[1500px] ">
+      <section className="pt-[100px] px-[120px] w-[1500px]">
       <p className="font-lexend text-[14px]  leading-[17.5px] font-medium text-orange">
         Ready To Sell!!
       </p>
@@ -80,7 +80,7 @@ const HouseDetails = () => {
             
           </div>
         </div>
-        <div className="w-[528px]   relative left-[100px] ">
+        <div className="w-[528px]   relative left-[100px]  ">
                 <div className="  absolute left-0 bottom-0 flex justify-end items-end gap-[12px] z-[1] object-cover">
    
   
@@ -89,7 +89,7 @@ const HouseDetails = () => {
                     <Image src='/../public/images/Rectangle20.jpg' className="rounded-[4px] h-[80px] w-[96px]" width='96' height='80'/>
                 
                 </div>
-                <div className="absolute right-0 top-0 w-[488px] h-[416px] video">
+                <div className="absolute right-0 top-0 w-[488px] h-[416px] video ">
                 <YouTube 
                         videoId="zumJJUL_ruM" 
                         opts={{
