@@ -13,14 +13,14 @@ export default function Reviewss() {
   const handleClick = (e, i) => {
       e.preventDefault();
       if (carouselRef.current) {
-          const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7* (i / reviews.length));
+          const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.3* (i / reviews.length));
           scroll(carouselRef.current, scrollLeft);
       }
   }
 
   const handleScroll = () => {
       if (carouselRef.current) {
-          const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * reviews.length);
+          const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.3)) * reviews.length);
           setActiveIndex(index);
       }
   }
@@ -28,7 +28,7 @@ export default function Reviewss() {
   useEffect(() => {
       const handleResize = () => {
           if (carouselRef.current) {
-              scroll(carouselRef.current, carouselRef.current.scrollWidth * 0.21);
+              scroll(carouselRef.current, carouselRef.current.scrollWidth * 0.15);
           }
       }
       handleResize();
@@ -48,7 +48,7 @@ export default function Reviewss() {
       </h2>
       </div>
 
-      <div className=" flex  gap-[56px] pt-[20px] h-[550px]  max-w-max overflow-x-auto  review " ref={carouselRef} onScroll={handleScroll} >
+      <div className=" flex  gap-[56px] pt-[20px] h-[550px]  max-w-max overflow-x-auto none review " ref={carouselRef} onScroll={handleScroll} >
 
         {reviews.map((review, index) => (
           <Card
