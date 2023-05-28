@@ -73,7 +73,7 @@ export default function Reviewss() {
                         key={index}
                         className={`button ${
                             index === activeIndex
-                            ? "bg-blue-700"
+                            ? ""
                             : "bg-yellow-400"
                         }`}
                         onClick={(e) => handleClick(e, index)}

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="flex flex-row justify-between px-[120px] py-[70px] ">
       <div className="flex flex-col gap-[20px] ">
-        <Image src="/../public/images/Logo.png" width="80" height="80" />
+        <Image src="/../public/images/Logo.png" width="80" height="80" alt="logo"/>
         <p className="font-lexnd font-normal w-[740px] text-[14px] leading-[24px] text-gray2 opacity-75">
           We provide information about properties such <br/>as houses,
            villas and apartments to help<br/> people find their dream home
@@ -17,16 +17,19 @@ const Footer = () => {
             src="/../public/images/brandico_facebook.png"
             width="30"
             height="30"
+            alt="brandico face"
           />
           <Image
             src="/../public/images/ant-design_instagram-filled.png"
             width="30"
             height="30"
+            alt="instagram"
           />
           <Image
             src="/../public/images/ant-design_twitter-outlined.png"
             width="30"
             height="30"
+            alt="twitter"
           />
         </div>
       </div>

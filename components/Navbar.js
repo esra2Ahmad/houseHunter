@@ -4,9 +4,12 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center  navbar absolute top-0">
-
-      <Image src="/../public/images/Logo.png " width="115" height="40"  />
-      
+      <Image
+        src="/../public/images/Logo.png "
+        width="115"
+        height="40"
+        alt="logo"
+      />
 
       <ul className="list-none  flex  justify-end items-center flex-1">
         {navLinks.map((nav, index) => (

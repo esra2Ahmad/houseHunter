@@ -9,24 +9,28 @@ const Subscribe = () => {
           src="/../public/images/Rectangle 12(1).png"
           width="81"
           height="81"
+          alt="rectangle 12"
         />
         <Image
           src="/../public/images/Ellipse 6(4).png"
           width="60"
           height="60"
           className=" relative top-[30px]"
+          alt="user"
         />
         <Image
           src="/../public/images/Ellipse 6(3).png"
           width="36"
           height="36"
           className="relative top-[-120px] left-[150px]"
+          alt="user"
         />
         <Image
           src="/../public/images/Rectangle 25.png"
           width="50"
           height="50"
           className="relative top-[-40px] left-[150px]"
+          alt="user"
         />
       </div>
       <div className=" px-[190px] py-[40px]  ">
@@ -51,12 +55,14 @@ const Subscribe = () => {
           width="70"
           height="70"
           className="relative mt-[30px] ml-[-100px] "
+          alt="rectangle 26"
         />
         <Image
           src="/../public/images/Ellipse 9.png"
           width="80"
           height="80"
           className="relative top-[-20px]"
+          alt="user"
         />
         <Image
           src="/../public/images/Ellipse 8.png
@@ -64,6 +70,7 @@ const Subscribe = () => {
           width="70"
           height="70"
           className="relative top-[-70px] left-[-80px] "
+          alt="user"
         />
 
         <Image
@@ -71,6 +78,7 @@ const Subscribe = () => {
           width="55"
           height="55"
           className="relative top-[-80px]"
+          alt="rectangle27"
         />
       </div>
     </div>

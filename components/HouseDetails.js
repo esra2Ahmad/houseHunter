@@ -31,12 +31,13 @@ const HouseDetails = () => {
           </h2>
           <div className="flex flex-row  flex-wrap ">
               <div className="flex flex-row items-center w-1/2 py-[25px] ">
-              <Image src="/../public/images/bed 1.png" width="30" height="30" />
+              <Image src="/../public/images/bed 1.png" width="30" height="30" alt="bedimage" />
               <p  className="px-[20px] font-lexend text-[16px]  leading-[20px] font-medium text-span"> 4 Bedrooms</p>
               </div>
               <div className="flex flex-row items-center  py-[25px]">
               <Image
                 src="/../public/images/car-garage 1.png"
+                alt=" car garage"
                 width="30"
                 height="30"
               />
@@ -45,6 +46,7 @@ const HouseDetails = () => {
               <div className="flex flex-row items-center w-1/2" >
               <Image
                 src="/../public/images/Group 12.png"
+                alt="group12"
                 width="30"
                 height="30"
               />
@@ -55,6 +57,7 @@ const HouseDetails = () => {
                 src="/../public/images/stairs-with-handrail 1.png"
                 width="30"
                 height="30"
+                alt=" stairs image"
               />
               <p className="px-[20px] font-lexend text-[16px]  leading-[20px] font-medium text-span">2 floors</p>
               </div>
@@ -64,6 +67,7 @@ const HouseDetails = () => {
               src="/../public/images/Ellipse 6(1).png"
               width="50"
               height="50"
+              alt="user"
             
             />
             <div>
@@ -84,9 +88,9 @@ const HouseDetails = () => {
                 <div className="  absolute left-0 bottom-0 flex justify-end items-end gap-[12px] z-[1] object-cover">
    
   
-                    <Image src='/../public/images/Rectangle18.jpg' className="rounded-[4px] w-[296px] h-[150px] " width='296' height='168'/>
-                    <Image src='/../public/images/Rectangle19.jpg' className="rounded-[4px] h-[80px] w-[96px] " width='96' height='80'/>
-                    <Image src='/../public/images/Rectangle20.jpg' className="rounded-[4px] h-[80px] w-[96px]" width='96' height='80'/>
+                    <Image src='/../public/images/Rectangle18.jpg' className="rounded-[4px] w-[296px] h-[150px] "alt="Rectangle18" width='296' height='168'/>
+                    <Image src='/../public/images/Rectangle19.jpg' className="rounded-[4px] h-[80px] w-[96px] " alt="Rectangle19" width='96' height='80'/>
+                    <Image src='/../public/images/Rectangle20.jpg' className="rounded-[4px] h-[80px] w-[96px]"  alt="Rectangle20"  width='96' height='80'/>
                 
                 </div>
                 <div className="absolute right-0 top-0 w-[488px] h-[416px] video ">

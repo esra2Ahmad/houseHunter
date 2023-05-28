@@ -21,6 +21,7 @@ const Hero = () => {
               <Image
                 className=" relative left-[30px]"
                 src="/../public/images/fluent_location-16-filled.png"
+                alt="fluent location"
                 width="25"
                 height="25"
               />
@@ -43,24 +44,28 @@ const Hero = () => {
                   src="/../images/traveloka_logo 2.png"
                   width={100}
                   height={50}
+                  alt="partner image"
                   className="bg-cover"
                 />
                 <img
                   src="/../images/traveloka_logo 3.png"
                   width={100}
                   height={50}
+                  alt="partner image"
                   className="bg-cover"
                 />
                 <img
                   src="/../images/traveloka_logo 4.png"
                   width={100}
                   height={50}
+                  alt="partner image"
                   className="bg-cover"
                 />
                 <img
                   src="/../images/traveloka_logo 5.png"
                   width={100}
                   height={50}
+                  alt="partner image"
                   className="bg-cover"
                 />
               </div>
@@ -72,6 +77,7 @@ const Hero = () => {
             src="/../public/images/image 6.png"
             width={800}
             height={700}
+            alt="puplic image"
             className=" bg-cover   z[-1] "
             
           />
